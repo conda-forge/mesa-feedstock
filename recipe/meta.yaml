@@ -10,7 +10,7 @@ source:
   sha256: 4bb8bbb54aa07ad1418260621fd2f1da585249aa024c934d65ac441bb67ec762
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - mesa=mesa.main:cli
@@ -56,3 +56,5 @@ about:
 extra:
   recipe-maintainers:
     - estshorter
+    - jackiekazil
+    - dmasad
