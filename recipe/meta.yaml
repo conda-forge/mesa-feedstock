@@ -46,6 +46,7 @@ test:
     - pip
 
 about:
+  home: https://github.com/projectmesa/mesa
   summary: Agent-based modeling (ABM) in Python 3+
   license: Apache-2.0 AND MIT
   license_file:
@@ -60,7 +61,6 @@ about:
     Python's data analysis tools. Its goal is to be the Python 3-based 
     alternative to NetLogo, Repast, or MASON.
   doc_url: https://mesa.readthedocs.io
-  dev_url: https://github.com/projectmesa/mesa
 
 extra:
   recipe-maintainers:
