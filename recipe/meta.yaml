@@ -14,7 +14,7 @@ build:
   noarch: python
   entry_points:
     - mesa=mesa.main:cli
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -36,8 +36,11 @@ requirements:
 test:
   imports:
     - mesa
+    - pip check
   commands:
     - mesa --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/projectmesa/mesa
@@ -54,7 +57,6 @@ about:
     Python's data analysis tools. Its goal is to be the Python 3-based 
     alternative to NetLogo, Repast, or MASON.
   doc_url: https://mesa.readthedocs.io
-  dev_url: https://github.com/projectmesa/mesa
 
 extra:
   recipe-maintainers:
