@@ -10,7 +10,7 @@ source:
   sha256: 4bb8bbb54aa07ad1418260621fd2f1da585249aa024c934d65ac441bb67ec762
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - mesa = mesa.main:cli
