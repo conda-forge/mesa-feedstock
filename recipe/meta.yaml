@@ -36,8 +36,8 @@ requirements:
 test:
   imports:
     - mesa
-    - pip check
   commands:
+    - pip check
     - mesa --help
   requires:
     - pip
