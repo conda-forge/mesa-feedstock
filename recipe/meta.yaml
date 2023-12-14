@@ -50,8 +50,7 @@ about:
   summary: Agent-based modeling (ABM) in Python 3+
   license: Apache-2.0 AND MIT
   license_file:
-    - LICENSE
-    - mesa/visualization/templates/external/bootstrap-slider-11.0.2/LICENSE.md
+    - LICENSE.txt
   description: |
     Mesa is an Apache2 licensed agent-based modeling (or ABM) 
     framework in Python. It allows users to quickly create agent-based 
