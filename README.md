@@ -9,8 +9,6 @@ Package license: Apache-2.0
 
 Summary: Agent-based modeling (ABM) in Python 3+
 
-Development: https://github.com/projectmesa/mesa
-
 Documentation: https://mesa.readthedocs.io
 
 Mesa is an Apache2 licensed agent-based modeling (or ABM)
