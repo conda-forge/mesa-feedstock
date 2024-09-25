@@ -1,5 +1,5 @@
 {% set name = "mesa" %}
-{% set version = "2.3.4" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/m/mesa/{{ name }}-{{ version }}.tar.gz
-  sha256: 76b9aebe95a9e93342a005e1abcc6d66308e232c040e3066f162a57b13399c12
+  sha256: 165425c8dbed317452153de4330084023007e1bf990acc6589488f81b46c4a07
 
 build:
   number: 0
