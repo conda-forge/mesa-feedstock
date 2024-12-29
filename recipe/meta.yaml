@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/m/mesa/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/m/mesa/{{ name }}-{{ version }}.tar.gz
   sha256: 165425c8dbed317452153de4330084023007e1bf990acc6589488f81b46c4a07
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - mesa=mesa.main:cli
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python {{ python_min }}
     - hatchling
   run:
     - click
@@ -27,7 +27,7 @@ requirements:
     - networkx
     - numpy
     - pandas
-    - python >=3.8
+    - python >={{ python_min }}
     - tornado
     - tqdm
     - matplotlib-base
@@ -42,6 +42,7 @@ test:
     - mesa --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/projectmesa/mesa
