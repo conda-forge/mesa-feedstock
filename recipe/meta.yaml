@@ -1,62 +1,51 @@
 {% set name = "mesa" %}
-{% set version = "2.4.0" %}
+{% set version = "3.1.2" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/m/mesa/{{ name }}-{{ version }}.tar.gz
-  sha256: 165425c8dbed317452153de4330084023007e1bf990acc6589488f81b46c4a07
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mesa-{{ version }}.tar.gz
+  sha256: bc2903334756857ada7566864d3495494baedf703392803ae6406d873eb86202
 
 build:
-  number: 0
   noarch: python
-  entry_points:
-    - mesa=mesa.main:cli
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
     - pip
-    - python >=3
+    - python {{ python_min }}
     - hatchling
+    - setuptools
   run:
-    - click
-    - cookiecutter
-    - networkx
     - numpy
     - pandas
-    - python >=3.8
-    - tornado
+    - python >={{ python_min }}
     - tqdm
-    - matplotlib-base
-    - solara
-    - mesa-viz-tornado~ =0.1.0,>=0.1.3
 
 test:
   imports:
     - mesa
   commands:
     - pip check
-    - mesa --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/projectmesa/mesa
   license: Apache-2.0
   license_family: Apache
-  license_file: LICENSE
-  summary: Agent-based modeling (ABM) in Python 3+
+  license_file:
+    - LICENSE
+    - NOTICE
+  summary: Agent-based modeling (ABM) in Python
   description: |
-    Mesa is an Apache2 licensed agent-based modeling (or ABM) 
-    framework in Python. It allows users to quickly create agent-based 
-    models using built-in core components (such as spatial grids and 
-    agent schedulers) or customized implementations; visualize them 
-    using a browser-based interface; and analyze their results using 
-    Python's data analysis tools. Its goal is to be the Python 3-based 
-    alternative to NetLogo, Repast, or MASON.
+    Mesa is an open-source Python library for agent-based modeling, ideal for simulating complex systems and exploring emergent behaviors.
   doc_url: https://mesa.readthedocs.io
 
 extra:
@@ -64,3 +53,4 @@ extra:
     - jackiekazil
     - dmasad
     - adamamer20
+    - josk0
