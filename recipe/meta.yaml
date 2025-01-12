@@ -1,5 +1,5 @@
 {% set name = "mesa" %}
-{% set version = "3.1.2" %}
+{% set version = "3.1.3" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mesa-{{ version }}.tar.gz
-  sha256: bc2903334756857ada7566864d3495494baedf703392803ae6406d873eb86202
+  sha256: b0cf64ddf924d11314dce3c5f092123aca70f8aa11ecf5c73caec83081804bbf
 
 build:
   noarch: python
@@ -26,6 +26,7 @@ requirements:
     - pandas
     - python >={{ python_min }}
     - tqdm
+    - scipy
 
 test:
   imports:
