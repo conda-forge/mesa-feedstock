@@ -26,6 +26,7 @@ requirements:
     - pandas
     - python >={{ python_min }}
     - tqdm
+    - scipy
 
 test:
   imports:
