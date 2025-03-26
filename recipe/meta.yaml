@@ -1,5 +1,5 @@
 {% set name = "mesa" %}
-{% set version = "3.1.4" %}
+{% set version = "3.1.5" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mesa-{{ version }}.tar.gz
-  sha256: b3338e084d94146df6b6ca57686f749af236bb7f3d46640ec2dec0e8011f257a
+  sha256: 657590ac2c00f0f0913411a954dc57ae9c5fc79c0cb4a3c7d9d8e6c6a470c1d0
 
 build:
   noarch: python
