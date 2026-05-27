@@ -10,6 +10,8 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mesa-{{ version }}.tar.gz
   sha256: 3f2dce3b8cbe2d89e0ec29e843176788b8cb170413c2cc7def9dbc6339752d78
 
+
+
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
@@ -27,6 +29,7 @@ requirements:
     - python >={{ python_min }}
     - tqdm
     - scipy
+    - networkx
 
 test:
   imports:
