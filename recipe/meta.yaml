@@ -15,14 +15,13 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }}.*
     - hatchling
-    - setuptools
   run:
     - numpy
     - pandas
@@ -38,10 +37,10 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }}.*
 
 about:
-  home: https://github.com/projectmesa/mesa
+  home: https://github.com/mesa/mesa
   license: Apache-2.0
   license_family: Apache
   license_file:
